@@ -7,14 +7,13 @@ const path = require('path');
 const app = express();
 
 app.use(morgan('tiny'));
-
-// serving static files
-
 app.use(express.static(path.join(__dirname, '/public/')));
 // app.use(express.static(path(__dirname,'/node_modules/bootstrap/dist/css')));
+app.set('views','./src/views');
+app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/views/', '/index.html'));
+  res.render('index');
 });
 
 
