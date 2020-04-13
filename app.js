@@ -3,6 +3,9 @@ const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -11,6 +14,11 @@ const port = process.env.PORT || 3001;
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({ secret: 'library' }));
+
+require('./src/config/passport.js')(app);
+
 app.use(express.static(path.join(__dirname, '/public')));
 // app.use(express.static(path(__dirname,'/node_modules/bootstrap/dist/css')));
 app.set('views', './src/views');
