@@ -19,12 +19,12 @@ const books = [
   }
 ];
 
-function router(nav) {
+function router() {
   adminRouter.route('/')
     .get((req, res) => {
       const url = 'mongodb://localhost:27017';
       const dbName = 'libraryApp';
-
+// asynchroneous function for db connection
       (async function mongo() {
         let client;
         try {
