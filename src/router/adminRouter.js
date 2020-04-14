@@ -7,11 +7,13 @@ const adminRouter = express.Router();
 const books = [
   {
     title: 'IOT',
-    author: 'Lev'
+    author: 'Lev',
+    bookId: 656
   },
   {
     title: 'Data',
-    author: 'Thomas'
+    author: 'Thomas',
+    bookId: 24280
   },
   {
     title: 'Embedded',
