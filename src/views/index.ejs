@@ -1,85 +1,4 @@
-<html>
-  <head>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-
-    <link rel="stylesheet" href="./css/template.css">
-  </head>
-  <body>
-  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Home</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <% for(let i=0; i < nav.length ;i++) {%>
-        <li>
-          <a href="<%= nav[i].link %>"><%= nav[i].title %></a>
-        </li>
-        <%}%>
-      </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div id="masthead">  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <h1>Storystrap
-          <p class="lead"></p>
-        </h1>
-      </div>
-      <div class="col-md-5">
-        <div class="well well-lg"> 
-          <div class="row">
-            <div class="col-sm-12">
-              
-			
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </div><!-- /cont -->
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="top-spacer"> </div>
-      </div>
-    </div> 
-  </div><!-- /cont -->
-  
-</div>
-
-
-<div class="container">
-  <div class="row">
-    
-    <div class="col-md-12"> 
-      
-      <div class="panel">
-        <div class="panel-body">
-          
-          
-          
+<%-include('partials/header.ejs')  %>
           <!--/stories-->
           <div class="row">    
             <br>
@@ -92,13 +11,6 @@ password: <input name="password" id="password"><br/>
 </form>
             </form>
           </div>
-          <hr>
-          
-          
+          <hr> 
       </div>
-    </div>
-  
-  </div>
-</body>
-</footer>
-</html>
+   <%-include('partials/footer.ejs') %>

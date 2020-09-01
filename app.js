@@ -43,9 +43,7 @@ app.get('/', (req, res) => {
   });
 });
 
-
-// how to listen
-
 app.listen(port, () => {
   debug(`Sever has started ${chalk.gray('3000')}`);
+  console.log('bb');
 });
